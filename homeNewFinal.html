@@ -15,6 +15,7 @@
             display: flex;
             width: 100%;
             padding-top: 5%;
+            padding: 2%;
             color: #0a1808;
             justify-content: center;
             align-items: center;
@@ -82,7 +83,7 @@
             position: relative;
             opacity: 1;
             padding: 10px;
-            color: #083503;;
+            color: #083503;
             font-size: 14px;
             font-weight: 400;
             letter-spacing: 1px;
@@ -102,13 +103,93 @@
 
         .map {
             width: 100%;
-            border: 2px solid #cdeec9;
+            border: 2px solid #c5c5c5;
         }
 
         .google_map {
             width: 100%;
         }
 
+        .animation {
+            margin: auto; 
+            align-items: center;
+            width: 50%;
+            height: 280px;
+            background-color: #cdeec9;
+            animation-name: anim;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            border: 2px solid #083503;
+            border-radius: 3px;
+        }
+
+        .contact_row {
+            display: flex;
+            /* padding-top: 2vh; */
+            border: 2px solid #ABEBC6;
+        }
+
+        .col2 {
+            flex: 70%;
+            width: 100%;
+            padding: 10px;
+            height: 300px;
+            background-image: linear-gradient( #c5c5c5 ,#ABEBC6 );
+        }
+
+        .col2 .contact {
+            width: 100%;
+            padding: 10px;
+            height: 280px;
+        }
+
+        .col2 .contact h2{
+            color: d#12290f;
+            font-weight: bold;
+        }
+
+        .col2 .contact p{
+            color: darkolivegreen;
+            font-weight: bold;
+            font-size: 15px;
+            padding: 13px;
+        }
+
+        .col2 .contact p span{
+            color: #12290f;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .col2 .contact p a{
+            color: darkolivegreen;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .col2 .contact p a:hover {
+            background: none;
+        }
+
+        .col2 .animation a {
+            display: block;
+            margin-top: 17vh;
+            text-align: center;
+            text-decoration: none;
+            font-family: fantasy;
+            font-size: x-large;
+            color: #060e05;
+        }
+        .col2 .animation a:hover {
+            background: none;
+        }
+
+        @keyframes anim {
+            0%   {background-image: linear-gradient( #c5c5c5 ,#ABEBC6);}
+            25%  {background-image: linear-gradient( #ABEBC6, #c5c5c5);}
+            50%  {background-image: linear-gradient( #c5c5c5 ,#ABEBC6);}
+            100% {background-image: linear-gradient( #ABEBC6, #c5c5c5);}
+        }
     </style>
 </head>
 
@@ -143,11 +224,11 @@
         <section>
             <div class="row" id="home">
                 <div class="column">
-                    <img src="B7.jpg" alt="" style="height: 565px">
-                    <img src="B1.jpg" alt="" style="height: 325px">
+                    <img src="1.jpg" alt="" style="height: 60%">
+                    <img src="3.jpg" alt="" style="height: 37%">
                 </div>
                 <div class="column">
-                    <img src="B10.jpg" alt="">
+                    <img src="2.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -157,7 +238,7 @@
                 <span>About Us</span>
             </h2>
             <div class="cols8 col">
-                <img src="B5.jpg" alt="">
+                <img src="https://www.salonsusee.lk/images/slider07.jpg" alt="">
             </div>
             <div class="cols4 col discription">
                 <p>
@@ -227,21 +308,49 @@
             <h2 class="title">
                 <span>Contact Us</span>
             </h2>
-            <!-- <div class="cols8 col">
-                <img src="https://www.salonsusee.lk/images/slider07.jpg" alt="">
-            </div> -->
+
+            <div class="contact_row">
+                
+                <div class="col2">
+                    <div class="contact">
+                        <h2>CONTACT DETAILS</h2>
+                        <p>
+                            <span>
+                                Address : 
+                            </span>
+                            No.243, Galle Road, Kaluthara South
+                        </p>
+                        <p>
+                            <span>
+                                Phone : 
+                            </span>
+                            077 704 4458
+                        </p>
+                        <p>
+                            <span>
+                                Email : 
+                            </span>
+                            <a href="mailto:bingusaranisalon@gmail.com" target="_blank">bingusaranisalon@gmail.com</a>
+                        </p>
+                        <p>
+                            <span>
+                                Facebook : 
+                            </span>
+                            <a href="https://www.facebook.com/salonbingusarani" target="_blank">facebook.com/salonbingusarani</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col2">
+                    <div class="animation">
+                        <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation2">Request an appointment</a>
+                    </div>
+                </div>
+            </div>
+
             <div class="map">
                 <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.545769062169!2d79.9606113143071!3d6.578862324343592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae23720b67fab2b%3A0x1b30ae2b32711db4!2sSalon%20Bingusarani!5e0!3m2!1sen!2slk!4v1610871768677!5m2!1sen!2slk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div><!-- <div class="cols4 col discription">
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati recusandae in repellendus est
-                    exercitationem sed tenetur et saepe minima ratione deleniti nesciunt suscipit provident laudantium nihil
-                    quidem aperiam, reprehenderit ut!
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ipsa error aliquid expedita libero
-                    vitae nesciunt, quo atque recusandae impedit ipsum? Aut suscipit adipisci atque temporibus laudantium,
-                    excepturi maiores non.
-                </p>
-            </div> -->
+            </div>
         </section>
     </div>
     

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.anim {
+  margin: auto; 
+  align-items: center;
+  width: 40%;
+  height: 10vh;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  border: 3px solid green;
+}
+.anim a {
+    display: block;
+    text-align: center;
+    padding: 4vh 0;
+    text-decoration: none;
+    font-family: fantasy;
+    color: black;
+}
+
+@keyframes example {
+  0%   {background-image: linear-gradient( #cdeec9, #fff);}
+  25%  {background-image: linear-gradient( #c6ee14, #fff);}
+  50%  {background-image: linear-gradient( #f8911b, #ca975d);}
+  100% {background-image: linear-gradient( #d1fd57, #c6ee14);}
+}
+</style>
+</head>
+<body>
+
+<p><b>Note:</b> This example does not work in Internet Explorer 9 and earlier versions.</p>
+
+<div class="anim"><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation2">Request an appointment</a>  </div>
+
+</body>
+</html>
+

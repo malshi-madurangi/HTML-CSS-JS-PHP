@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<style>
+.slideshow_container {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;   /*to fit to width 100% and remove .sliderRow->display:flex*/
+  height: 400px;
+}
+
+.image_slides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+.image_slides img {
+  object-fit: cover;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.slideshow_arrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshow_arrow:hover {
+  opacity: 0.75;
+}
+
+#left_arrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#right_arrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshow_circles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+</style>
+<body>
+	
+		<div class="slideshow_container">
+			<img class="image_slides" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=673&q=80" alt="beach side city view">
+            <img class="image_slides" src="https://images.unsplash.com/photo-1501876725168-00c445821c9e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="leaf on the ground">
+            <img class="image_slides" src="https://cdn.shopify.com/s/files/1/0264/6972/8316/files/bg-2.jpg?v=1566547839" alt="lake surrounded by mountains">
+            <span id ="left_arrow" class="slideshow_arrow">&#8249;</span>
+			<span id ="right_arrow" class="slideshow_arrow">&#8250;</span>
+		  
+			<div class="slideshow_circles">
+			    <span class="circle dot"></span>
+			    <span class="circle"></span>
+			    <span class="circle"></span>
+  			</div>
+  
+		</div>
+	
+
+<script type="text/javascript">
+	window.addEventListener("scroll",function () {
+		const navbar= document.querySelector(".nav");
+		// console.log(navbar);
+		navbar.classList.toggle("sticky", window.scrollY>0);
+	})
+
+	// IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
+	var image_slides = document.getElementsByClassName('image_slides');
+	var circles = document.getElementsByClassName('circle');
+	var left_arrow = document.getElementById('left_arrow');
+	var right_arrow = document.getElementById('right_arrow');
+	var counter = 0;
+
+	// HIDE ALL IMAGES FUNCTION
+	function hideImages() {
+	  for (var i = 0; i < image_slides.length; i++) {
+	    image_slides[i].classList.remove('visible');
+	  }
+	}
+
+	// REMOVE ALL DOTS FUNCTION
+	function removeDots() {
+	  for (var i = 0; i < image_slides.length; i++) {
+	    circles[i].classList.remove('dot');
+	  }
+	}
+
+	// SINGLE IMAGE LOOP/CIRCLES FUNCTION
+	function imageLoop() {
+	  var currentImage = image_slides[counter];
+	  var currentDot = circles[counter];
+	  currentImage.classList.add('visible');
+	  removeDots();
+	  currentDot.classList.add('dot');
+	  counter++;
+	}
+
+	// LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+	function arrowClick(e) {
+	  var target = e.target;
+	  if (target == left_arrow) {
+	    clearInterval(image_slideshowInterval);
+	    hideImages();
+	    removeDots();
+	    if (counter == 1) {
+	      counter = (image_slides.length - 1);
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    } else {
+	      counter--;
+	      counter--;
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    }
+	  } 
+	  else if (target == right_arrow) {
+	    clearInterval(image_slideshowInterval);
+	    hideImages();
+	    removeDots();
+	    if (counter == image_slides.length) {
+	      counter = 0;
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    } else {
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    }
+	  }
+	}
+
+	left_arrow.addEventListener('click', arrowClick);
+	right_arrow.addEventListener('click', arrowClick);
+
+
+	// IMAGE SLIDE FUNCTION
+	function slideshow() {
+	  if (counter < image_slides.length) {
+	    imageLoop();
+	  } else {
+	    counter = 0;
+	    hideImages();
+	    imageLoop();
+	  }
+	}
+
+	setTimeout(slideshow, 1000);
+	var image_slideshowInterval = setInterval(slideshow, 10000);
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+</html>

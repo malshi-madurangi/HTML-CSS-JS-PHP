@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="xxx.css">
+    <link rel="stylesheet" href="gallery.css">
+    <style>
+        .containerbody section{
+            padding:0 2%;
+        }
+        .title span {
+            display: flex;
+            width: 100%;
+            padding-top: 5%;
+            color: #0a1808;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .title span:before,
+        .title span:after {
+            content: '';
+            border-top: 2px solid #060e05;;
+            margin: 0 20px 0 0;
+            flex: 1 0 20px;
+        }
+
+        .title span:after {
+            margin: 0 0 0 20px;
+        }
+
+        .col {
+            white-space: normal;
+            vertical-align: top;
+            display: inline-flex;
+            overflow: hidden;
+        }
+
+        .col img {
+            display: inline-flex;
+            width: 100%;
+            position: relative;
+            opacity: 1;
+            padding: 10px;
+        }
+
+        .col p{
+            display: inline-flex;
+            width: 100%;
+            position: relative;
+            opacity: 1;
+            padding: 10px;
+            color: #083503;;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 19px;
+            text-align: justify;
+        }
+
+        p {
+            margin: 0 0 10px;
+        }
+        .cols8 {
+            width: 66%;
+        }
+
+        .cols4 {
+            position: relative;
+            width: 33%;
+        }
+
+        .para p{
+            display: inline-flex;
+            width: 100%;
+            position: relative;
+            opacity: 1;
+            padding: 10px;
+            color: #083503;;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 19px;
+            text-align: justify;
+        }
+
+        .para ul{
+            list-style-type: square;
+            color: #083503;;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 19px;
+            text-align: justify;
+        }
+
+        .map {
+            width: 100%;
+            border: 2px solid #cdeec9;
+        }
+
+        .google_map {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <input id="nav-toggle" type="checkbox">
+        <div class="logo">
+            <img src="logo.png" style="height: 100px; align-items: center;">
+        </div>
+
+        <hr>
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about_us">About us</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#service">Service</a></li>
+            <li><a href="#contact_us">Contact Us</a></li>
+            <li><a href="#">Login</a></li>
+            <!-- <li><a href="#" id="logout">Logout</a></li> -->
+        </ul>
+        <hr>
+        
+        <label for="nav-toggle" class="icon-burger" id="cross" >
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </label>
+        </div>
+    </nav>
+
+    <div class="containerbody">
+        <section>
+            <div class="row" id="home">
+                <div class="column">
+                    <img src="B7.jpg" alt="" style="height: 565px">
+                    <img src="B1.jpg" alt="" style="height: 325px">
+                </div>
+                <div class="column">
+                    <img src="B10.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section id="about_us">
+            <h2 class="title">
+                <span>About Us</span>
+            </h2>
+            <div class="cols8 col">
+                <img src="B5.jpg" alt="">
+            </div>
+            <div class="cols4 col discription">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nam excepturi laboriosam minima quasi quos temporibus 
+                    recusandae ut modi maiores sit a ipsam, delectus nobis molestias esse laudantium! Et, enim!
+                </p>
+            </div>
+        </section>
+        
+        <section id="gallery">
+            <h2 class="title">
+                <span>Gallery</span>
+            </h2>
+            <div class="slideshow_container">
+                <img class="image_slides" src="1a.jpg">
+                <img class="image_slides" src="2a.jpg">
+                <img class="image_slides" src="3aa.jpg">
+                <img class="image_slides" src="5.jpg">
+                <img class="image_slides" src="6.jpg">
+                <span id ="left_arrow" class="slideshow_arrow">&#8249;</span>
+                <span id ="right_arrow" class="slideshow_arrow">&#8250;</span>
+              
+                <div class="slideshow_circles">
+                    <span class="circle dot"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                    <span class="circle"></span>
+                </div>
+      
+            </div>
+        </section>
+
+        <section id="service">
+            <h2 class="title">
+                <span>Service</span>
+            </h2>
+            <div class="cols8 col">
+                <img src="B2.jpg" style="height: 100vh;">
+            </div>
+            <div class="cols4 col discription">
+                <div class="para">
+                    <p>
+                        The most beautiful day in a girl's life is the day she gets married. We can make that unforgettable and special day the most 
+                        beautiful and extraordinary day of her life. We have a unique sense of beauty and a very high ability to highlight and 
+                        enhance the bride's natural looks, glamorous and charm. We have been the most leading and trending bridal and beauty care 
+                        stylists in Sri Lanka since 2010.<br>
+                    </p>
+                    <p style="font-weight: bold;">"Bigusarani" another name for glamorous, charm and beauty.</p><br>
+                    <p style="font-weight: bold; text-decoration: underline;">Our services include:</p>
+                    <ul>
+                        <li>Bridal dressing</li>
+                        <li>Hair and Make-up</li>
+                        <li>Retinue Bridal outfit and dressing</li>
+                        <li>Going away</li>
+                        <li>Homecoming</li>
+                        <li>Designing</li>
+                        <li>Facials</li>
+                        <li>Treading</li>
+                        <li>Waxing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact_us">
+            <h2 class="title">
+                <span>Contact Us</span>
+            </h2>
+            <!-- <div class="cols8 col">
+                <img src="https://www.salonsusee.lk/images/slider07.jpg" alt="">
+            </div> -->
+            <div class="map">
+                <iframe class="google_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.545769062169!2d79.9606113143071!3d6.578862324343592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae23720b67fab2b%3A0x1b30ae2b32711db4!2sSalon%20Bingusarani!5e0!3m2!1sen!2slk!4v1610871768677!5m2!1sen!2slk" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div><!-- <div class="cols4 col discription">
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati recusandae in repellendus est
+                    exercitationem sed tenetur et saepe minima ratione deleniti nesciunt suscipit provident laudantium nihil
+                    quidem aperiam, reprehenderit ut!
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium ipsa error aliquid expedita libero
+                    vitae nesciunt, quo atque recusandae impedit ipsum? Aut suscipit adipisci atque temporibus laudantium,
+                    excepturi maiores non.
+                </p>
+            </div> -->
+        </section>
+    </div>
+    
+<script type="text/javascript">
+    //******************************toggle JS*************************************//
+    const a =  document.getElementById('cross');
+
+    document.querySelector('.links').addEventListener('click', function () { 
+        a.click();
+    });
+
+    //***********************gallery JS*************************//
+    window.addEventListener("scroll",function () {
+		const navbar= document.querySelector(".nav");
+		// console.log(navbar);
+		navbar.classList.toggle("sticky", window.scrollY>0);
+	})
+
+	// IMAGE SLIDES & CIRCLES ARRAYS, & COUNTER
+	var image_slides = document.getElementsByClassName('image_slides');
+	var circles = document.getElementsByClassName('circle');
+	var left_arrow = document.getElementById('left_arrow');
+	var right_arrow = document.getElementById('right_arrow');
+	var counter = 0;
+
+	// HIDE ALL IMAGES FUNCTION
+	function hideImages() {
+	  for (var i = 0; i < image_slides.length; i++) {
+	    image_slides[i].classList.remove('visible');
+	  }
+	}
+
+	// REMOVE ALL DOTS FUNCTION
+	function removeDots() {
+	  for (var i = 0; i < image_slides.length; i++) {
+	    circles[i].classList.remove('dot');
+	  }
+	}
+
+	// SINGLE IMAGE LOOP/CIRCLES FUNCTION
+	function imageLoop() {
+	  var currentImage = image_slides[counter];
+	  var currentDot = circles[counter];
+	  currentImage.classList.add('visible');
+	  removeDots();
+	  currentDot.classList.add('dot');
+	  counter++;
+	}
+
+	// LEFT & RIGHT ARROW FUNCTION & CLICK EVENT LISTENERS
+	function arrowClick(e) {
+	  var target = e.target;
+	  if (target == left_arrow) {
+	    clearInterval(image_slideshowInterval);
+	    hideImages();
+	    removeDots();
+	    if (counter == 1) {
+	      counter = (image_slides.length - 1);
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    } else {
+	      counter--;
+	      counter--;
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    }
+	  } 
+	  else if (target == right_arrow) {
+	    clearInterval(image_slideshowInterval);
+	    hideImages();
+	    removeDots();
+	    if (counter == image_slides.length) {
+	      counter = 0;
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    } else {
+	      imageLoop();
+	      image_slideshowInterval = setInterval(slideshow, 10000);
+	    }
+	  }
+	}
+
+	left_arrow.addEventListener('click', arrowClick);
+	right_arrow.addEventListener('click', arrowClick);
+
+
+	// IMAGE SLIDE FUNCTION
+	function slideshow() {
+	  if (counter < image_slides.length) {
+	    imageLoop();
+	  } else {
+	    counter = 0;
+	    hideImages();
+	    imageLoop();
+	  }
+	}
+
+	setTimeout(slideshow, 1000);
+	var image_slideshowInterval = setInterval(slideshow, 10000);
+
+</script>
+
+</body>
+
+</html>
